@@ -22,13 +22,13 @@ class LiiloMangopayExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('parameters.yml');
-        $loader->load('services.yml');
-        
         $container->setParameter('liilo_mangopay_service.client_id',        $config['client_id']);
         $container->setParameter('liilo_mangopay_service.client_password',  $config['client_password']);
         $container->setParameter('liilo_mangopay_service.temp_folder',      $config['temp_folder']);
         $container->setParameter('liilo_mangopay_service.prod',             $config['prod']);
+        
+        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('parameters.yml');
+        $loader->load('services.yml');
     }
 }
