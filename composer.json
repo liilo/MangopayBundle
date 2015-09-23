@@ -1,0 +1,24 @@
+{
+  "name" : "LiiloMangopayBundle",
+  "description" : "MangoPay API for Symfony2",
+  "require" : {
+    "php" : ">=5.3.2",
+    "symfony/symfony" : ">=2.3.18",
+    "mangopay/php-sdk-v2" : "1.4.*"
+  },
+  "target-dir" : "Liilo/MangoPayBundle",
+  "authors" : [ {
+    "name" : "Lionel Gattegno",
+    "email" : "lionel@liilo.com"
+  } ],
+  "keywords" : [ "mangopay" ],
+  "minimum-stability" : "stable",
+  "autoload" : {
+    "psr-0" : {
+      "Liilo\\MangoPayBundle\\" : ""
+    }
+  },
+  "license" : "MIT",
+  "type" : "symfony-bundle",
+  "homepage" : "https://github.com/liilo/LiiloMangoPayBundle"
+}

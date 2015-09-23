@@ -1,0 +1,2 @@
+parameters:
+    liilo_mangopay_service.class: Liilo\MangopayBundle\Service\MangopayService
