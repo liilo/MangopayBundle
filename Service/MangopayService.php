@@ -33,12 +33,19 @@ class MangopayService
     public function __construct($clientId, $clientPassword, $tempFolder, $prod)
     {
         $this->mangoPayApi = new MangoPay\MangoPayApi();
+        
         $this->mangoPayApi->Config->ClientId = $clientId;
         $this->mangoPayApi->Config->ClientPassword = $clientPassword;
-        $this->mangoPayApi->Config->TemporaryFolder = $tempFolder;
-        
         if (true === $prod)
             $this->mangoPayApi->Config->BaseUrl = 'https://api.mangopay.com';
+        
+        $tempFolder = $tempFolder . DIRECTORY_SEPARATOR . ($prod ? 'prod' : 'sandbox');
+        
+        // create temp folder if needed
+        if (false === is_dir($tempFolder))
+            mkdir($tempFolder, 0770, true);
+        
+        $this->mangoPayApi->Config->TemporaryFolder = $tempFolder;
     }
     
     /**
