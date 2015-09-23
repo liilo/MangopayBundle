@@ -1,5 +1,5 @@
 {
-  "name" : "LiiloMangopayBundle",
+  "name" : "liilo/mangopay-bundle",
   "description" : "MangoPay API for Symfony2",
   "require" : {
     "php" : ">=5.3.2",
