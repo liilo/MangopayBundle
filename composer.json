@@ -4,7 +4,7 @@
   "require" : {
     "php" : ">=5.3.2",
     "symfony/symfony" : ">=2.3.18",
-    "mangopay/php-sdk-v2" : "2.4.2"
+    "mangopay/php-sdk-v2" : "2.4.*"
   },
   "target-dir" : "Liilo/MangopayBundle",
   "authors" : [ {
