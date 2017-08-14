@@ -1,8 +1,4 @@
 services:
     liilo_mangopay_service:
-        class: %liilo_mangopay_service.class%
-        arguments:
-            client_id:            %liilo_mangopay_service.client_id%
-            client_password:      %liilo_mangopay_service.client_password%
-            temp_folder:          %liilo_mangopay_service.temp_folder%
-            prod:                 %liilo_mangopay_service.prod%
+        class: "%liilo_mangopay_service.class%"
+        arguments: ["%liilo_mangopay_service.client_id%", "%liilo_mangopay_service.client_password%", "%liilo_mangopay_service.temp_folder%", "%liilo_mangopay_service.prod%"]
